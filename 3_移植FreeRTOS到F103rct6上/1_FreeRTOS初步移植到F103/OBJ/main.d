@@ -43,3 +43,6 @@
 ..\obj\main.o: ..\FreeRTOS\include\mpu_wrappers.h
 ..\obj\main.o: ..\FreeRTOS\include\task.h
 ..\obj\main.o: ..\FreeRTOS\include\list.h
+..\obj\main.o: ..\HARDWARE\PWM\pwm.h
+..\obj\main.o: ..\HARDWARE\DMA\dma.h
+..\obj\main.o: ..\HARDWARE\WS2812B\ws2812b.h

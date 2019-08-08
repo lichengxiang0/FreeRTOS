@@ -103,7 +103,11 @@ void delay_xms(u32 nms)
 }
 
 
-
+void delay_s(u16 s){ //S秒级延时程序（参考值即是延时数，最大值65535）	 		  	  
+	while( s-- != 0){
+		delay_ms(1000);	//调用1000毫秒的延时
+	}
+} 
 
 
 

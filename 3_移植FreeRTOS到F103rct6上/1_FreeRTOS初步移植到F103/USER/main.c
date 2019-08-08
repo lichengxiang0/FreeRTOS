@@ -3,6 +3,9 @@
 #include "sys.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "pwm.h"
+#include "dma.h"
+#include "ws2812b.h"
 /************************************************
  ALIENTEK Mini STM32F103开发板 FreeRTOS实验2-1
  FreeRTOS移植实验-库函数版本
@@ -83,7 +86,31 @@ int main(void)
 	delay_init();	    				//延时函数初始化	  
 	uart_init(115200);					//初始化串口
 	LED_Init();		  					//初始化LED
+//	TIM1_PWM_Init(89,0);
+	TIM2_PWM_Init(89,0);
+	TIM2_DMA_Init();
+	
+	while(1)
+	{
+				
+			WS2812_Red_BLN();				//红色呼吸灯
+			WS2812_Green_BLN();			//绿色呼吸灯
+			WS2812_Blue_BLN();			//蓝色呼吸灯
 
+		
+#if 0		
+//		LED0 = 0;
+		LED1 = 0;
+		delay_ms(1000);
+//		LED0 = 1;
+		LED1 = 1;
+		delay_ms(1000);
+#endif		
+		
+	}
+	
+	
+#if 0
 	StartTask_Handler = xTaskCreateStatic(	(TaskFunction_t		) start_task,    	//任务函数
 											(const char *		)  "start_task",	//任务名称
 											(uint32_t			) START_STK_SIZE,	//任务堆栈大小
@@ -93,7 +120,7 @@ int main(void)
 											(StaticTask_t *		) &StartTaskTCB );	//任务控制块
 							
 	 vTaskStartScheduler();          //开启任务调度
-
+#endif
 	
 	
 		//用系统写不会用到while循环
