@@ -9,6 +9,9 @@
 "..\obj\stm32f10x_rcc.o"
 "..\obj\stm32f10x_usart.o"
 "..\obj\misc.o"
+"..\obj\stm32f10x_dma.o"
+"..\obj\stm32f10x_pwr.o"
+"..\obj\stm32f10x_tim.o"
 "..\obj\croutine.o"
 "..\obj\event_groups.o"
 "..\obj\list.o"
@@ -21,6 +24,6 @@
 "..\obj\sys.o"
 "..\obj\usart.o"
 --strict --scatter "..\OBJ\LED.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\LED.map" -o ..\OBJ\LED.axf
