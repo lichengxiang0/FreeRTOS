@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.20.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 ^_^, 1, LIC=DSNJJ-U8SBJ-66HQS-LVWVD-XHRE1-CJ8PN
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.20
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 2 (build 183)
+Assembler:       Armasm.exe V5.06 update 2 (build 183)
+Linker/Locator:  ArmLink.exe V5.06 update 2 (build 183)
+Library Manager: ArmAr.exe V5.06 update 2 (build 183)
+Hex Converter:   FromElf.exe V5.06 update 2 (build 183)
+CPU DLL:         SARMCM3.DLL V5.20
+Dialog DLL:      DARMSTM.DLL V1.66.0.0
+Target DLL:      UL2CM3.DLL V1.157.18.0
+Dialog DLL:        TARMSTM.DLL   
+ 
+<h2>Project:</h2>
+E:\5_GitHub\FreeRTOS\3_移植FreeRTOS到F103rct6上\7_FreeRTOS其他任务API函数\USER\FreeRTOS.uvprojx
+Project File Date:  06/10/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'LED'
+compiling main.c...
+main.c(143): error:  #268: declaration may not appear after executable statement in block
+  	TaskHandle_t TaskHandle;	
+main.c(144): error:  #268: declaration may not appear after executable statement in block
+  	TaskStatus_t TaskStatus;
+main.c(166): error:  #268: declaration may not appear after executable statement in block
+  	eTaskState TaskState;
+main.c(167): error:  #268: declaration may not appear after executable statement in block
+  	char TaskInfo[10];
+main.c: 0 warnings, 4 errors
+"..\OBJ\LED.axf" - 4 Error(s), 0 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\5_GitHub\FreeRTOS\3_移植FreeRTOS到F103rct6上\7_FreeRTOS其他任务API函数\USER\RTE
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
