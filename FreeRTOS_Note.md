@@ -34,11 +34,11 @@ https://www.freertos.org/
 
 打开中断：portENABLE_INTERRUPTS()
 
-![qizhong ](image\三位表达优先级.png)
+![qizhong ](image\three_representation_priorities.png)
 
 其中STM32采用的是***四位表达优先级组***
 
-![](image\分组关系.png)
+![](image\grouping_relationship.png)
 
 STM32只有5组分组：3、4、 5、 6、 7，其中FreeRTOS采用分组位置3，四位全是抢占优先级，没有亚优先级
 
@@ -72,59 +72,57 @@ STM32只有5组分组：3、4、 5、 6、 7，其中FreeRTOS采用分组位置3
 
 ## 5.ARM架构 
 
-片上系统：Soc
+片上系统：Soc 
 
 ARM处理器架构进化史：
 
-![](image\ARM处理器架构进化史.png)
-
-![](image\FreeRTOS必备知识.png)
+![](image\ARM_architecture.png)
 
 
 
 Cortex-M3处理器拥有R0-R15的寄存器组。其中R13作为堆栈指针SP，SP有两个，但同一时刻只能有一个可以看到，这就是所谓的“banked”寄存器。
 
-![](image\Cortex-M3寄存器.png)
+![寄存器](image\Cortex-M3_register.png)
 
 
 
 特殊功能寄存器：
 
-![](image\M3寄存器组.png)
+![](image\M3_register_team.png)
 
-![](image\特殊功能寄存器组.png)
+![](image\special_function_register_group.png)
 
-![](image\程序状态寄存器png.png)
+![](image\program_status_register.png)
 
-![](image\合体后的程序状态寄存器png.png)
+![](image\consolidated_program_status_register.png)
 
-![](image\控制寄存器.png)
+![](image\control_register.png)
 
-![](image\屏蔽寄存器.png)
+![](image\shielding_register.png)
 
-![](image\堆栈指针R13.png)
+![](image\stack_pointer_R13.png)
 
 
 
 存储器映射：总体来说，Cortex-M3支持4GB存储空间
 
-![](image\M3存储器映射.png)
+![](image\M3_storage_mapping.png)
 
 
 
 中断异常：
 
-![](image\M3异常类型1.png)
+![](image\M3_abnormal_type1.png)
 
-![](image\M3异常类型2.png)
+![](image\M3_abnormal_type2.png)
 
 
 
 向量表：
 
-![](image\向量表1.png)
+![](image\vector_table1.png)
 
-![](image\向量表2.png)
+![](image\vector_table2.png)
 
 
 
